@@ -1,0 +1,19 @@
+.header .container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.header .container .branding {
+    cursor: pointer;
+    flex-basis: 30%;
+}
+
+.header .container .nav {
+    flex-basis: 70%;
+    text-align: right;
+}
+
+.header .container .nav button {
+    margin-right: 4px;
+}
