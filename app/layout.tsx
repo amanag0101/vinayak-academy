@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import styles from "./layout.module.css";
+import { Box } from "@mui/material";
 
 export default function RootLayout({
   children,
@@ -10,12 +10,18 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={styles.layout}>
-        <div className={styles.header}><Header /></div>
+      <body>
+        <Box sx={{ height: "100vh" }}>
+          <Box sx={{ height: "10vh" }}>
+            <Header />
+          </Box>
 
-        <div className={styles.content}>{children}</div>
+          <Box sx={{ height: "80vh", display: "flex" }}>{children}</Box>
 
-        <div className={styles.footer}><Footer /></div>
+          <Box sx={{ height: "10vh" }}>
+            <Footer />
+          </Box>
+        </Box>
       </body>
     </html>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { Button } from "@mui/material";
-import styles from "./styles/header.module.css";
+import { Button, Box } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -9,21 +8,28 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <div className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.branding} onClick={() => router.push("/")}>
+    <Box>
+      <Box sx={{ display: "flex", alignItems: "center", padding: "8px" }}>
+        <Box
+          sx={{ cursor: "pointer", flexBasis: "30%" }}
+          onClick={() => router.push("/")}
+        >
           <h2>Vinayak Academy</h2>
-        </div>
+        </Box>
 
-        <div className={styles.nav}>
+        <Box sx={{ flexBasis: "70%", textAlign: "right" }}>
           <Link href={"login"}>
-            <Button variant="contained">Login</Button>
+            <Button variant="contained" sx={{ marginRight: "4px" }}>
+              Login
+            </Button>
           </Link>
           <Link href={"register"}>
-            <Button variant="contained">Register</Button>
+            <Button variant="contained" sx={{ marginRight: "4px" }}>
+              Register
+            </Button>
           </Link>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   );
 };
