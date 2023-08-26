@@ -14,43 +14,41 @@ import {
 import Link from "next/link";
 export default function Sidebar() {
   return (
-    <Box sx={{ borderRightWidth: "2px" }}>
-      <Box sx={{ height: "100%", padding: "4px" }}>
+    <Box sx={{ height: "100%", borderRightWidth: "2px" }}>
+      <Box sx={{ padding: "4px" }}>
         <Box sx={{ fontWeight: "700" }}>
           <List disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <SpaceDashboardIcon sx={{color:"blue"}}/>
+                <SpaceDashboardIcon sx={{ color: "blue" }} />
               </ListItemIcon>
               <ListItemText primary="Dashboard" />
             </ListItemButton>
             <ListItemButton>
-
-                <ListItemIcon sx={{color:"blue"}}>
-                  <SchoolIcon />
-                </ListItemIcon>
-                <ListItemText primary="My Classes" />
-             
+              <ListItemIcon sx={{ color: "blue" }}>
+                <SchoolIcon />
+              </ListItemIcon>
+              <ListItemText primary="My Classes" />
             </ListItemButton>
             <ListItemButton>
-                <ListItemIcon sx={{color:"blue"}}>
-                  <MenuBookIcon />
-                </ListItemIcon>
+              <ListItemIcon sx={{ color: "blue" }}>
+                <MenuBookIcon />
+              </ListItemIcon>
 
-                <ListItemText primary="Ebook" />
+              <ListItemText primary="Ebook" />
             </ListItemButton>
             <ListItemButton className="rounded-sm">
-                <ListItemIcon sx={{color:"blue"}}>
+              <ListItemIcon sx={{ color: "blue" }}>
                 <AccountBalanceWalletIcon />
-                </ListItemIcon>
-                
-                <ListItemText primary="Transactions"/>
+              </ListItemIcon>
+
+              <ListItemText primary="Transactions" />
             </ListItemButton>
             <ListItemButton className="rounded-sm">
-                <ListItemIcon sx={{color:"blue"}}>
+              <ListItemIcon sx={{ color: "blue" }}>
                 <SettingsSuggestIcon />
-                </ListItemIcon>
-                <ListItemText primary="Settings"/>
+              </ListItemIcon>
+              <ListItemText primary="Settings" />
             </ListItemButton>
           </List>
         </Box>
