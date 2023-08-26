@@ -9,9 +9,8 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  colors,
 } from "@mui/material";
-import Link from "next/link";
+
 export default function Sidebar() {
   return (
     <Box sx={{ height: "100%", borderRightWidth: "2px" }}>
