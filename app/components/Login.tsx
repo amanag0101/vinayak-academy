@@ -3,10 +3,13 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { login } from "../features/authentication/AuthenticationSlice";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -21,6 +24,12 @@ export const Login = () => {
     // TODO: implement sign in logic
     console.log("Email:", email);
     console.log("Password:", password);
+
+    dispatch(
+      login({
+        userId: email,
+      })
+    );
   };
 
   return (
