@@ -29,8 +29,7 @@ export const Login = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f0f2f5"
+        backgroundColor: "#f0f2f5",
       }}
     >
       <Typography variant="h4" sx={{ marginBottom: 2 }}>

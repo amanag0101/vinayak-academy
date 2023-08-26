@@ -29,9 +29,6 @@ export const Register = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        height: "100%",
-        width: "100vw",
         backgroundColor: "#f0f2f5",
       }}
     >

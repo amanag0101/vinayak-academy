@@ -98,7 +98,7 @@ const Chat = () => {
               <Grid container>
                 <Grid item xs={12}>
                   <ListItemText
-                    sx={{ textAlign: "right" }}
+                    sx={{ textAlign: "left" }}
                     primary="Hey man, What's up ?"
                   />
                 </Grid>
