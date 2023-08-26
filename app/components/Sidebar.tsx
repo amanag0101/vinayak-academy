@@ -13,8 +13,8 @@ import {
 
 export default function Sidebar() {
   return (
-    <Box sx={{ height: "100%", borderRightWidth: "2px" }}>
-      <Box sx={{ padding: "4px" }}>
+    <Box sx={{ borderRightWidth: "2px" }}>
+      <Box sx={{ height: "100%", padding: "4px" }}>
         <Box sx={{ fontWeight: "700" }}>
           <List disablePadding>
             <ListItemButton>

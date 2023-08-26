@@ -12,17 +12,17 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <Box sx={{ height: "100vh" }}>
-          <Box sx={{ height: "10vh" }}>
+        <Box sx={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+          <Box sx={{ flex: 0.1 }}>
             <Header />
           </Box>
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", flex: 0.8 }}>
             <Box sx={{ position: "sticky", top: 0 }}>
               <Sidebar />
             </Box>
-            <Box sx={{ height: "80vh", display: "flex" }}>{children}</Box>
+            <Box sx={{ flex: 1 }}>{children}</Box>
           </Box>
-          <Box sx={{ height: "10vh" }}>
+          <Box sx={{ flex: 0.1 }}>
             <Footer />
           </Box>
         </Box>

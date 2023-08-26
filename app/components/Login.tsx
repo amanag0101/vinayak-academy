@@ -30,9 +30,7 @@ export const Login = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        height: "100%",
-        width: "100vw",
-        backgroundColor: "#f0f2f5",
+        backgroundColor: "#f0f2f5"
       }}
     >
       <Typography variant="h4" sx={{ marginBottom: 2 }}>
@@ -41,7 +39,6 @@ export const Login = () => {
       <Box
         component="form"
         sx={{
-          width: "80%",
           maxWidth: 400,
           padding: 4,
           borderRadius: 2,
