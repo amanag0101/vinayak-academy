@@ -3,20 +3,14 @@
 import { Button, Box } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { Authentication } from "../features/authentication/AuthenticationSlice";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { UserAuthentication } from "../features/authentication/AuthenticationSlice";
 
 export const Header = () => {
   const router = useRouter();
-  const dispatch = useDispatch();
-  const isLoggedIn = useSelector(
-    (state: Authentication) => state.isAuthenticated
-  );
-
-  useEffect(() => {
-    console.log(`isLoggedIn: ${isLoggedIn}`);
-  }, [dispatch, isLoggedIn]);
+  const userAuthentication = useSelector((state: UserAuthentication) => {
+    return state.authentication;
+  });
 
   return (
     <Box>
@@ -29,7 +23,7 @@ export const Header = () => {
         </Box>
 
         <Box sx={{ flexBasis: "70%", textAlign: "right" }}>
-          {!isLoggedIn ? (
+          {!userAuthentication.isAuthenticated ? (
             <>
               <Link href={"login"}>
                 <Button variant="contained" sx={{ marginRight: "4px" }}>

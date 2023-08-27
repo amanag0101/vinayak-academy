@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export interface Authentication {
-  userId: string;
-  isAuthenticated: boolean;
+export interface UserAuthentication {
+  authentication: {
+    userId: string;
+    isAuthenticated: boolean;
+  };
 }
 
 export const AuthenticationSlice = createSlice({
