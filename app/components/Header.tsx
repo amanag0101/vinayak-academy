@@ -3,14 +3,23 @@
 import { Button, Box } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useSelector } from "react-redux";
-import { UserAuthentication } from "../features/authentication/AuthenticationSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  UserAuthentication,
+  logout,
+} from "../features/authentication/AuthenticationSlice";
 
 export const Header = () => {
   const router = useRouter();
   const userAuthentication = useSelector((state: UserAuthentication) => {
     return state.authentication;
   });
+  const dispatch = useDispatch();
+
+  const logoutUser = () => {
+    dispatch(logout());
+    router.push("/");
+  };
 
   return (
     <Box>
@@ -37,7 +46,15 @@ export const Header = () => {
               </Link>
             </>
           ) : (
-            <>Student</>
+            <>
+              <Button
+                variant="contained"
+                sx={{ marginRight: "4px" }}
+                onClick={logoutUser}
+              >
+                Logout
+              </Button>
+            </>
           )}
         </Box>
       </Box>

@@ -5,11 +5,13 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { login } from "../features/authentication/AuthenticationSlice";
+import { useRouter } from "next/navigation";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -30,6 +32,8 @@ export const Login = () => {
         userId: email,
       })
     );
+
+    router.push("/student");
   };
 
   return (
@@ -80,7 +84,7 @@ export const Login = () => {
       <Typography variant="body2" sx={{ marginTop: 2 }}>
         {"Don't have an account?"}
         <Link href={"register"}>
-          <Button variant="text" color="primary">
+          <Button variant="text" color="primary" >
             Sign Up
           </Button>
         </Link>
