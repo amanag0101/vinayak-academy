@@ -5,7 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Box } from "@mui/material";
 import Sidebar from "./components/Sidebar";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import store from "./store";
 
 export default function RootLayout({
