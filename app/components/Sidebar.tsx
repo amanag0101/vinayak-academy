@@ -51,18 +51,18 @@ export default function Sidebar() {
               <ListItemText primary="Doubt Support" />
             </ListItemButton>
 
+            <ListItemButton onClick={() => handlePageChange("/student/ebooks")}>
+              <ListItemIcon sx={{ color: "blue" }}>
+                <MenuBookIcon />
+              </ListItemIcon>
+              <ListItemText primary="Ebooks" />
+            </ListItemButton>
+
             <ListItemButton>
               <ListItemIcon sx={{ color: "blue" }}>
                 <SchoolIcon />
               </ListItemIcon>
               <ListItemText primary="My Classes" />
-            </ListItemButton>
-
-            <ListItemButton>
-              <ListItemIcon sx={{ color: "blue" }}>
-                <MenuBookIcon />
-              </ListItemIcon>
-              <ListItemText primary="Ebook" />
             </ListItemButton>
 
             <ListItemButton className="rounded-sm">
