@@ -2,10 +2,10 @@
 
 import React from "react";
 import { Box, Paper, Grid, Typography } from "@mui/material";
-import DoubtSidebar from "./doubt/DoubtSidebar";
-import CreateDoubt from "./doubt/CreateDoubt";
+import { CreateDoubt } from "./CreateDoubt";
+import { DoubtSidebar } from "./DoubtSidebar";
 
-function Doubt() {
+export const DoubtSupport = () => {
   return (
     <Box sx={{}}>
       <Grid container item>
@@ -21,6 +21,4 @@ function Doubt() {
       </Grid>
     </Box>
   );
-}
-
-export default Doubt;
+};

@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 
-export default function Doubt() {
+export const CreateDoubt = () => {
   const [selectedSubject, setSelectedSubject] = useState("");
   const [doubtText, setDoubtText] = useState("");
   const [doubtImage, setDoubtImage] = useState(null);
@@ -109,4 +109,4 @@ export default function Doubt() {
       </Grid>
     </Box>
   );
-}
+};

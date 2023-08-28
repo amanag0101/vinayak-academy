@@ -1,6 +1,6 @@
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
-import BarChartIcon from '@mui/icons-material/BarChart';
-import ChatIcon from '@mui/icons-material/Chat';
+import BarChartIcon from "@mui/icons-material/BarChart";
+import ChatIcon from "@mui/icons-material/Chat";
 import SchoolIcon from "@mui/icons-material/School";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
@@ -33,14 +33,18 @@ export default function Sidebar() {
               <ListItemText primary="Dashboard" />
             </ListItemButton>
 
-            <ListItemButton onClick={() => handlePageChange("/student/analysis")}>
+            <ListItemButton
+              onClick={() => handlePageChange("/student/analysis")}
+            >
               <ListItemIcon>
                 <BarChartIcon sx={{ color: "blue" }} />
               </ListItemIcon>
               <ListItemText primary="Analysis" />
             </ListItemButton>
 
-            <ListItemButton onClick={() => handlePageChange("/student/doubt")}>
+            <ListItemButton
+              onClick={() => handlePageChange("/student/doubt-support")}
+            >
               <ListItemIcon>
                 <ChatIcon sx={{ color: "blue" }} />
               </ListItemIcon>

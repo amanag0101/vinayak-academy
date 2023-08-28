@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@mui/material";
 
-export default function DoubtSidebar() {
+export const DoubtSidebar = () => {
   const doubts = [{ title: " First Doubt", guide: "Vishal" }];
   return (
     <Grid item xs={3} sx={{ borderRight: "1px solid #e0e0e0" }}>
@@ -44,4 +44,4 @@ export default function DoubtSidebar() {
       </List>
     </Grid>
   );
-}
+};
