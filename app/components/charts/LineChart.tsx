@@ -9,7 +9,7 @@ import {
   CategoryScale,
   Title,
 } from "chart.js";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 Chart.register(
   LineController,
@@ -21,11 +21,11 @@ Chart.register(
 );
 
 export const LineChart = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  let canvas: HTMLCanvasElement | null = null;
 
   useEffect(() => {
-    if (canvasRef.current) {
-      const ctx = canvasRef.current.getContext("2d");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
       if (ctx) {
         new Chart(ctx, {
           type: "line",
@@ -54,5 +54,5 @@ export const LineChart = () => {
     }
   }, []);
 
-  return <canvas ref={canvasRef}></canvas>;
+  return <canvas ref={(el) => (canvas = el)}></canvas>;
 };

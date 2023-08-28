@@ -1,16 +1,16 @@
 "use client";
 
 import { Chart, PieController, ArcElement, Tooltip, Legend, Title } from "chart.js";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 Chart.register(PieController, ArcElement, Tooltip, Legend, Title);
 
 export const PieChart = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  let canvas: HTMLCanvasElement | null = null;
 
   useEffect(() => {
-    if (canvasRef.current) {
-      const ctx = canvasRef.current.getContext("2d");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
       if (ctx) {
         new Chart(ctx, {
           type: "pie",
@@ -50,5 +50,5 @@ export const PieChart = () => {
     }
   }, []);
 
-  return <canvas ref={canvasRef}></canvas>;
+  return <canvas ref={(el) => (canvas = el)}></canvas>;
 };
