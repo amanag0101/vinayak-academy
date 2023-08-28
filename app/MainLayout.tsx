@@ -14,48 +14,44 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
   });
 
   return (
-    <Box>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
+          border: "1px solid #ccc",
+          flex: 0.1,
         }}
       >
+        <Header />
+      </Box>
+      <Box sx={{ display: "flex", flex: 0.8 }}>
         <Box
           sx={{
             border: "1px solid #ccc",
-            flex: 0.1,
+            borderTop: 0,
+            borderBottom: 0,
+            flex: userAuthentication.isAuthenticated ? 0.2 : 0,
+            display: userAuthentication.isAuthenticated ? "block" : "none",
           }}
         >
-          <Header />
+          <Sidebar />
         </Box>
-        <Box sx={{ display: "flex", flex: 0.8 }}>
-          <Box
-            sx={{
-              border: "1px solid #ccc",
-              borderTop: 0,
-              borderBottom: 0,
-              position: "sticky",
-              top: 0,
-              flex: userAuthentication.isAuthenticated ? 0.2 : 0,
-              display: userAuthentication.isAuthenticated ? "block" : "none",
-            }}
-          >
-            <Sidebar />
-          </Box>
-          <Box sx={{ flex: userAuthentication.isAuthenticated ? 0.8 : 1 }}>
-            {children}
-          </Box>
+        <Box sx={{ flex: userAuthentication.isAuthenticated ? 0.8 : 1 }}>
+          {children}
         </Box>
-        <Box
-          sx={{
-            border: "1px solid #ccc",
-            flex: 0.1,
-          }}
-        >
-          <Footer />
-        </Box>
+      </Box>
+      <Box
+        sx={{
+          border: "1px solid #ccc",
+          flex: 0.1,
+        }}
+      >
+        <Footer />
       </Box>
     </Box>
   );
