@@ -1,15 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  Box,
-  Paper,
-  Grid,
-  Typography,
-} from "@mui/material";
+import React from "react";
+import { Box, Paper, Grid, Typography } from "@mui/material";
 import DoubtSidebar from "./doubt/DoubtSidebar";
 import CreateDoubt from "./doubt/CreateDoubt";
-import Chat from "./doubt/Chat";
 
 function Doubt() {
   return (
@@ -23,9 +17,8 @@ function Doubt() {
       </Grid>
       <Grid container component={Paper}>
         <DoubtSidebar />
-        <CreateDoubt/>
+        <CreateDoubt />
       </Grid>
-
     </Box>
   );
 }

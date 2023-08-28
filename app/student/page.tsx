@@ -1,5 +1,3 @@
-import { StudentDashboard } from "../components/student/Dashboard";
-
 export default function StudentDashboardPage() {
-  return <StudentDashboard />;
+  return <h1>Student Dashboard</h1>
 }

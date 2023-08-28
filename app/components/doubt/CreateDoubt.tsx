@@ -67,7 +67,7 @@ export default function Doubt() {
             margin: "11vh",
           }}
         >
-          <Typography variant="h6" sx={{textAlign:"center"}}>
+          <Typography variant="h6" sx={{ textAlign: "center" }}>
             Class : {studentRecord.class}
           </Typography>
           <FormControl sx={{ width: "100%" }}>
