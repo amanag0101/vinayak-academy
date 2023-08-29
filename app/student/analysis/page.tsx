@@ -1,5 +1,5 @@
-import { StudentDashboard } from "@/app/components/student/Dashboard";
+import { StudentAnalysis } from "@/app/components/student/Analysis";
 
 export default function StudentAnalysisPage() {
-  return <StudentDashboard />;
+  return <StudentAnalysis />;
 }
