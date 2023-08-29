@@ -31,7 +31,7 @@ export const Header = () => {
           <h2>Vinayak Academy</h2>
         </Box>
 
-        <Box sx={{ flexBasis: "70%", textAlign: "right" }}>
+        <Box sx={{ marginLeft: "auto" }}>
           {!userAuthentication.isAuthenticated ? (
             <>
               <Link href={"login"}>

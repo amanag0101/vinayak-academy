@@ -21,34 +21,35 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
         flexDirection: "column",
       }}
     >
+      {/* Header */}
       <Box
         sx={{
           border: "1px solid #ccc",
-          flex: 0.1,
         }}
       >
         <Header />
       </Box>
-      <Box sx={{ display: "flex", flex: 0.8 }}>
+
+      {/* Sidebar and Main Children */}
+      <Box sx={{ display: "flex", flex: 1 }}>
         <Box
           sx={{
             border: "1px solid #ccc",
             borderTop: 0,
             borderBottom: 0,
-            flex: userAuthentication.isAuthenticated ? 0.2 : 0,
             display: userAuthentication.isAuthenticated ? "block" : "none",
           }}
         >
           <Sidebar />
         </Box>
-        <Box sx={{ flex: userAuthentication.isAuthenticated ? 0.8 : 1 }}>
-          {children}
-        </Box>
+
+        <Box sx={{ flex: 1 }}>{children}</Box>
       </Box>
+
+      {/* Footer */}
       <Box
         sx={{
           border: "1px solid #ccc",
-          flex: 0.1,
         }}
       >
         <Footer />
