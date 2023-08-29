@@ -5,7 +5,6 @@ import {
   ListItemText,
   Divider,
   TextField,
-  Grid,
   Fab,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
@@ -39,47 +38,47 @@ export default function Chat() {
     }
   };
   return (
-    <Box sx={{ minWidth: "70%" }}>
-      <Grid >
-        <List sx={{ minHeight: "60vh", overflowY: "auto" }}>
-          {chatMessages.map((message, index) => (
-            <ListItemButton key={index}>
-              <Grid container item>
-                <Grid item xs={12}>
-                  <ListItemText
-                    sx={{ textAlign: message.align }}
-                    primary={message.content}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <ListItemText
-                    sx={{ textAlign: message.align }}
-                    secondary={message.time}
-                  />
-                </Grid>
-              </Grid>
-            </ListItemButton>
-          ))}
-        </List>
-        <Divider />
-        <Grid container sx={{ padding: "20px" }} item>
-          <Grid item xs={11}>
-            <TextField
-              id="outlined-basic-email"
-              label="Enter Your Doubt"
-              fullWidth
-              value={newMessage}
-              onChange={handleChange}
-              onKeyDown={handleChange}
-            />
-          </Grid>
-          <Grid item xs={1} sx={{ textAlign: "right" }}>
-            <Fab color="primary" aria-label="add" onClick={handleSendClick}>
-              <SendIcon />
-            </Fab>
-          </Grid>
-        </Grid>
-      </Grid>
+    <Box>
+      <List>
+        {chatMessages.map((message, index) => (
+          <ListItemButton key={index}>
+            <Box>
+              <Box>
+                <ListItemText
+                  sx={{ textAlign: message.align }}
+                  primary={message.content}
+                />
+              </Box>
+              <Box>
+                <ListItemText
+                  sx={{ textAlign: message.align }}
+                  secondary={message.time}
+                />
+              </Box>
+            </Box>
+          </ListItemButton>
+        ))}
+      </List>
+
+      <Divider />
+
+      <Box sx={{ display: "flex", alignItems: "center", padding: "8px" }}>
+        <Box sx={{ flex: 1 }}>
+          <TextField
+            label="Enter Your Doubt"
+            fullWidth
+            value={newMessage}
+            onChange={handleChange}
+            onKeyDown={handleChange}
+          />
+        </Box>
+
+        <Box sx={{ padding: "4px" }}>
+          <Fab color="primary" aria-label="add" onClick={handleSendClick}>
+            <SendIcon />
+          </Fab>
+        </Box>
+      </Box>
     </Box>
   );
 }

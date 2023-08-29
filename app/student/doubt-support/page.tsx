@@ -1,10 +1,5 @@
-import { DoubtSupport } from "@/app/components/doubt-support/DoubtSupport";
-import { Box } from "@mui/material";
+import { DoubtSupport } from "@/app/components/student/doubt-support/DoubtSupport";
 
 export default function StudentDoubtSupportPage() {
-  return (
-    <Box>
-      <DoubtSupport />
-    </Box>
-  );
+  return <DoubtSupport />;
 }
