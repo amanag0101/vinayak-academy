@@ -9,8 +9,16 @@ import {
   TextField,
   Grid,
 } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { selectDoubt } from "@/app/features/page/doubtsSlice";
+import { CreateDoubt } from "./CreateDoubt";
 
 export const DoubtSidebar = () => {
+  const dispatch = useDispatch();
+
+  const handleDoubtClick = (doubt: any) => {
+    dispatch(selectDoubt(doubt)); // Dispatch the action with the selected doubt
+  };
   const doubts = [{ title: " First Doubt", guide: "Vishal" }];
   return (
     <Grid item xs={3} sx={{ borderRight: "1px solid #e0e0e0" }}>
@@ -25,8 +33,12 @@ export const DoubtSidebar = () => {
         </Grid>
         <Divider />
         <List>
+          <ListItemButton onClick={() => dispatch(selectDoubt(null))}>
+            Create Doubt
+          </ListItemButton>
+          <Divider />
           {doubts.map((doubt) => (
-            <ListItemButton>
+            <ListItemButton onClick={() => handleDoubtClick(doubt)}>
               <ListItemIcon>
                 <Avatar
                   alt="Remy Sharp"

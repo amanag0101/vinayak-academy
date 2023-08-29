@@ -39,8 +39,8 @@ export default function Chat() {
     }
   };
   return (
-    <Box sx={{ minWidth: "70vw" }}>
-      <Grid item xs={9}>
+    <Box sx={{ minWidth: "70%" }}>
+      <Grid >
         <List sx={{ minHeight: "60vh", overflowY: "auto" }}>
           {chatMessages.map((message, index) => (
             <ListItemButton key={index}>

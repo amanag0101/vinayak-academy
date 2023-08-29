@@ -50,27 +50,23 @@ export const CreateDoubt = () => {
     <Box
       sx={{
         display: "flex",
-        minWidth: "70vw",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
+        minWidth: "70%",
       }}
     >
       <Grid container justifyContent="center">
         <Box
           sx={{
             padding: "50px",
-            backgroundColor: "lightgrey",
             borderRadius: "8px",
             display: "flex",
             flexDirection: "column",
-            margin: "11vh",
+            backgroundColor: "lightgrey",
           }}
         >
           <Typography variant="h6" sx={{ textAlign: "center" }}>
             Class : {studentRecord.class}
           </Typography>
-          <FormControl sx={{ width: "100%" }}>
+          <FormControl sx={{ width: "100%", padding: "10px" }}>
             <InputLabel>Subject</InputLabel>
             <Select
               value={selectedSubject}
