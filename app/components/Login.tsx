@@ -39,13 +39,12 @@ export const Login = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         backgroundColor: "#f0f2f5",
+        borderRadius: 2,
+        padding: "12px 24px",
       }}
     >
-      <Typography variant="h4" sx={{ marginBottom: 2 }}>
+      <Typography variant="h4" sx={{ marginBottom: 2, textAlign: "center" }}>
         Sign In
       </Typography>
       <Box
@@ -81,10 +80,10 @@ export const Login = () => {
           Sign In
         </Button>
       </Box>
-      <Typography variant="body2" sx={{ marginTop: 2 }}>
+      <Typography variant="body2" sx={{ marginTop: 2, textAlign: "center" }}>
         {"Don't have an account?"}
         <Link href={"register"}>
-          <Button variant="text" color="primary" >
+          <Button variant="text" color="primary">
             Sign Up
           </Button>
         </Link>

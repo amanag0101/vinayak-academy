@@ -3,10 +3,15 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { login } from "../features/authentication/AuthenticationSlice";
+import { useRouter } from "next/navigation";
 
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -26,19 +31,17 @@ export const Register = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         backgroundColor: "#f0f2f5",
+        borderRadius: 2,
+        padding: "12px 24px",
       }}
     >
-      <Typography variant="h4" sx={{ marginBottom: 2 }}>
+      <Typography variant="h4" sx={{ marginBottom: 2, textAlign: "center" }}>
         Register
       </Typography>
       <Box
         component="form"
         sx={{
-          width: "80%",
           maxWidth: 400,
           padding: 4,
           borderRadius: 2,
@@ -69,9 +72,9 @@ export const Register = () => {
           Register
         </Button>
       </Box>
-      <Typography variant="body2" sx={{ marginTop: 2 }}>
+      <Typography variant="body2" sx={{ marginTop: 2, textAlign: "center" }}>
         {"Already have an account?"}
-        <Link href="login">
+        <Link href={"login"}>
           <Button variant="text" color="primary">
             Sign In
           </Button>

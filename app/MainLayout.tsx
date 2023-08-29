@@ -24,7 +24,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Header */}
       <Box
         sx={{
-          border: "1px solid #ccc",
+          borderBottom: "1px solid #ccc",
         }}
       >
         <Header />
@@ -43,13 +43,22 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
           <Sidebar />
         </Box>
 
-        <Box sx={{ flex: 1 }}>{children}</Box>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {children}
+        </Box>
       </Box>
 
       {/* Footer */}
       <Box
         sx={{
-          border: "1px solid #ccc",
+          borderTop: "1px solid #ccc",
         }}
       >
         <Footer />
