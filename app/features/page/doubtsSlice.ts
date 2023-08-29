@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+export interface Doubt{
+  doubts:{
+    selectedDoubt:Object
+  }
+}
+
 const doubtsSlice = createSlice({
   name: "doubts",
   initialState: {

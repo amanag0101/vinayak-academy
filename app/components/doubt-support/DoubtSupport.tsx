@@ -6,14 +6,12 @@ import { CreateDoubt } from "./CreateDoubt";
 import { DoubtSidebar } from "./DoubtSidebar";
 import { useSelector } from "react-redux";
 import Chat from "../chat/Chat";
+import { Doubt } from "@/app/features/page/doubtsSlice";
 
-interface doubt{
-  doubts:{
-    selectedDoubt:Object
-  }
-}
 export const DoubtSupport = () => {
-  const selectedDoubt = useSelector((state: doubt) => state.doubts.selectedDoubt);
+  const selectedDoubt = useSelector(
+    (state: Doubt) => state.doubts.selectedDoubt
+  );
   return (
     <Box>
       <Grid container item>

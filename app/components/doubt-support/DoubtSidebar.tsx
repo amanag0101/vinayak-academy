@@ -10,14 +10,13 @@ import {
   Grid,
 } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { selectDoubt } from "@/app/features/page/doubtsSlice";
-import { CreateDoubt } from "./CreateDoubt";
+import { selectDoubt,Doubt } from "@/app/features/page/doubtsSlice";
 
 export const DoubtSidebar = () => {
   const dispatch = useDispatch();
 
-  const handleDoubtClick = (doubt: any) => {
-    dispatch(selectDoubt(doubt)); // Dispatch the action with the selected doubt
+  const handleDoubtClick = (doubt: Doubt) => {
+    dispatch(selectDoubt(doubt));
   };
   const doubts = [{ title: " First Doubt", guide: "Vishal" }];
   return (
@@ -37,7 +36,7 @@ export const DoubtSidebar = () => {
             Create Doubt
           </ListItemButton>
           <Divider />
-          {doubts.map((doubt) => (
+          {doubts.map((doubt:any) => (
             <ListItemButton onClick={() => handleDoubtClick(doubt)}>
               <ListItemIcon>
                 <Avatar
