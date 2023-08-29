@@ -3,9 +3,9 @@ import { EbookNavbar } from "./NavBar";
 
 export const Ebook = () => {
   return (
-    <Box sx={{ height: "100%" }}>
+    <Box sx={{ height: "100%", width: "100%" }}>
       <Box sx={{ display: "flex", height: "100%" }}>
-        <Box sx={{ border: "1px solid #ccc" }}>
+        <Box>
           <EbookNavbar />
         </Box>
         <Box sx={{ flex: 1 }}>
