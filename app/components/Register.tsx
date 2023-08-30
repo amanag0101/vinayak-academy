@@ -31,9 +31,10 @@ export const Register = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#f0f2f5",
+        border: "2px solid #ccc",
         borderRadius: 2,
         padding: "12px 24px",
+        boxShadow: 4,
       }}
     >
       <Typography variant="h4" sx={{ marginBottom: 2, textAlign: "center" }}>
@@ -45,8 +46,8 @@ export const Register = () => {
           maxWidth: 400,
           padding: 4,
           borderRadius: 2,
-          boxShadow: 1,
-          backgroundColor: "#ffffff",
+          boxShadow: 4,
+          backgroundColor: "#fff",
         }}
         onSubmit={handleSubmit}
       >

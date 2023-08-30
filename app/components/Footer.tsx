@@ -1,20 +1,18 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export const Footer = () => {
   return (
-    <Container sx={{ padding: "8px" }}>
-      <Typography variant="h6" align="center" gutterBottom>
+    <Box sx={{ padding: "8px", textAlign: "center" }}>
+      <Typography variant="h6" gutterBottom>
         Vinayak Academy
       </Typography>
-      <Typography variant="body2" align="center">
+      <Typography variant="body2">
         123 Main Street, Anytown USA 12345
       </Typography>
-      <Typography variant="body2" align="center">
-        Phone: (123) 456-7890
-      </Typography>
-      <Typography variant="body2" align="center">
+      <Typography variant="body2">Phone: (123) 456-7890</Typography>
+      <Typography variant="body2" gutterBottom>
         Email: info@vinayakacademy.com
       </Typography>
-    </Container>
+    </Box>
   );
 };

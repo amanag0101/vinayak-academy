@@ -20,10 +20,20 @@ export const DoubtSupport = () => {
           height: "100%",
         }}
       >
-        <Box sx={{ borderRight: "1px solid #ccc" }}>
+        <Box sx={{ boxShadow: 2 }}>
           <DoubtSidebar />
         </Box>
-        <Box sx={{ flex: 1 }}>{selectedDoubt ? <Chat /> : <CreateDoubt />}</Box>
+        <Box sx={{ flex: 1, margin: "" }}>
+          {selectedDoubt ? (
+            <Box sx={{ boxShadow: 2 }}>
+              <Chat />
+            </Box>
+          ) : (
+            <Box sx={{ boxShadow: 2 }}>
+              <CreateDoubt />
+            </Box>
+          )}
+        </Box>
       </Box>
     </Box>
   );

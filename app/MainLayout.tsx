@@ -24,7 +24,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Header */}
       <Box
         sx={{
-          borderBottom: "1px solid #ccc",
+          boxShadow: 1
         }}
       >
         <Header />
@@ -34,7 +34,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <Box sx={{ display: "flex", flex: 1 }}>
         <Box
           sx={{
-            border: "1px solid #ccc",
+            boxShadow: 2,
             borderTop: 0,
             borderBottom: 0,
             display: userAuthentication.isAuthenticated ? "block" : "none",
@@ -58,7 +58,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
       {/* Footer */}
       <Box
         sx={{
-          borderTop: "1px solid #ccc",
+          boxShadow: 4
         }}
       >
         <Footer />

@@ -22,41 +22,39 @@ export const Header = () => {
   };
 
   return (
-    <Box>
-      <Box sx={{ display: "flex", alignItems: "center", padding: "8px" }}>
-        <Box
-          sx={{ cursor: "pointer", flexBasis: "30%" }}
-          onClick={() => router.push("/")}
-        >
-          <h2>Vinayak Academy</h2>
-        </Box>
+    <Box sx={{ display: "flex", alignItems: "center", padding: "8px" }}>
+      <Box
+        sx={{ cursor: "pointer", flexBasis: "30%" }}
+        onClick={() => router.push("/")}
+      >
+        <h2>Vinayak Academy</h2>
+      </Box>
 
-        <Box sx={{ marginLeft: "auto" }}>
-          {!userAuthentication.isAuthenticated ? (
-            <>
-              <Link href={"login"}>
-                <Button variant="contained" sx={{ marginRight: "4px" }}>
-                  Login
-                </Button>
-              </Link>
-              <Link href={"register"}>
-                <Button variant="contained" sx={{ marginRight: "4px" }}>
-                  Register
-                </Button>
-              </Link>
-            </>
-          ) : (
-            <>
-              <Button
-                variant="contained"
-                sx={{ marginRight: "4px" }}
-                onClick={logoutUser}
-              >
-                Logout
+      <Box sx={{ marginLeft: "auto" }}>
+        {!userAuthentication.isAuthenticated ? (
+          <>
+            <Link href={"login"}>
+              <Button variant="contained" sx={{ marginRight: "4px" }}>
+                Login
               </Button>
-            </>
-          )}
-        </Box>
+            </Link>
+            <Link href={"register"}>
+              <Button variant="contained" sx={{ marginRight: "4px" }}>
+                Register
+              </Button>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Button
+              variant="contained"
+              sx={{ marginRight: "4px" }}
+              onClick={logoutUser}
+            >
+              Logout
+            </Button>
+          </>
+        )}
       </Box>
     </Box>
   );

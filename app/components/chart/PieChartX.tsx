@@ -3,7 +3,7 @@ import { PieChart } from "@mui/x-charts";
 
 export const PieChartX = () => {
   return (
-    <Box sx={{ backgroundColor: "" }}>
+    <Box sx={{ backgroundColor: "#fff", boxShadow: 2 }}>
       <PieChart
         series={[
           {

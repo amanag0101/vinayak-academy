@@ -3,7 +3,7 @@ import { LineChart } from "@mui/x-charts";
 
 export const LineChartX = () => {
   return (
-    <Box sx={{ backgroundColor: "" }}>
+    <Box sx={{ backgroundColor: "#fff", boxShadow: 2 }}>
       <LineChart
         xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
         series={[

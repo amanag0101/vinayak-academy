@@ -3,7 +3,7 @@ import { BarChart } from "@mui/x-charts";
 
 export const BarChartX = () => {
   return (
-    <Box sx={{ backgroundColor: "" }}>
+    <Box sx={{ backgroundColor: "#fff", boxShadow: 2 }}>
       <BarChart
         xAxis={[
           {

@@ -52,7 +52,7 @@ export const CreateDoubt = () => {
       }}
     >
       <FormControl fullWidth>
-        <InputLabel>Subject</InputLabel>
+        <InputLabel>Select Subject</InputLabel>
         <Select value={selectedSubject} onChange={handleSubjectChange}>
           {studentRecord.subjects.map((subject) => (
             <MenuItem key={uuidv4()} value="math">
@@ -63,7 +63,7 @@ export const CreateDoubt = () => {
       </FormControl>
 
       <TextField
-        label="Doubt Text"
+        label="Doubt description..."
         multiline
         rows={4}
         value={doubtText}
@@ -83,7 +83,7 @@ export const CreateDoubt = () => {
         onClick={handleSendDoubt}
         fullWidth
       >
-        Send Doubt
+        Submit
       </Button>
     </Box>
   );

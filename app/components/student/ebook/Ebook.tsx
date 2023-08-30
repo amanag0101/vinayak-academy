@@ -5,7 +5,7 @@ export const Ebook = () => {
   return (
     <Box sx={{ height: "100%", width: "100%" }}>
       <Box sx={{ display: "flex", height: "100%" }}>
-        <Box>
+        <Box sx={{boxShadow: 4}}>
           <EbookNavbar />
         </Box>
         <Box sx={{ flex: 1 }}>
