@@ -7,59 +7,34 @@ import { BarChartX } from "../chart/BarChartX";
 
 export const StudentAnalysis = () => {
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box
-        sx={{
-          display: "flex",
-        }}
-      >
-        {/* Col-1 */}
-        <Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Box sx={{ margin: "auto" }}>
-              <LineChartX />
-            </Box>
-
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <Box>
-                <PieChartX />
-              </Box>
-              <Box>
-                <Box>
-                  <BarChartX />
-                </Box>
-                <Box>
-                  <LineChartX />
-                </Box>
-              </Box>
-            </Box>
-          </Box>
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex ",
+      }}
+    >
+      {/* Col-1 */}
+      <Box sx={{ flex: 0.7 }}>
+        <Box sx={{ boxShadow: 8 }}>
+          <LineChartX />
         </Box>
-
-        {/* Col-2 */}
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-          }}
-        >
+        <Box sx={{ display: "flex", justifyContent: "center", boxShadow: 8 }}>
+          <Box>
+            <PieChartX />
+          </Box>
           <Box>
             <BarChartX />
           </Box>
-          <Box sx={{ borderTop: "1px solid #ccc" }}>
-            <LineChartX />
-          </Box>
+        </Box>
+      </Box>
+
+      {/* Col-2 */}
+      <Box sx={{ height: "100%", flex: 0.3, boxShadow: 8 }}>
+        <Box>
+          <PieChartX />
+        </Box>
+        <Box>
+          <LineChartX />
         </Box>
       </Box>
     </Box>

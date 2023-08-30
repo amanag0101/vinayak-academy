@@ -3,7 +3,9 @@ import { BarChart } from "@mui/x-charts";
 
 export const BarChartX = () => {
   return (
-    <Box sx={{ backgroundColor: "#fff", boxShadow: 2 }}>
+    <Box
+      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <BarChart
         xAxis={[
           {

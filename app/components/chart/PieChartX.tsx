@@ -3,7 +3,9 @@ import { PieChart } from "@mui/x-charts";
 
 export const PieChartX = () => {
   return (
-    <Box sx={{ backgroundColor: "#fff", boxShadow: 2 }}>
+    <Box
+      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <PieChart
         series={[
           {
@@ -15,7 +17,7 @@ export const PieChartX = () => {
           },
         ]}
         width={350}
-        height={600}
+        height={300}
       />
       <Typography sx={{ textAlign: "center" }}>Total Improvement</Typography>
     </Box>
